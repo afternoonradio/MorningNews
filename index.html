@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>我的谜语小游戏</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f9fafb;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>谜语：白天看不见，晚上亮晶晶，它是什么？</h1>
+  <input id="answer" placeholder="输入答案...">
+  <button onclick="checkAnswer()">提交</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer() {
+      const ans = document.getElementById('answer').value.trim();
+      const result = document.getElementById('result');
+      if (ans === '星星') {
+        result.textContent = '✅ 答对啦！进入下一关~';
+      } else {
+        result.textContent = '❌ 再想想看~';
+      }
+    }
+  </script>
+</body>
+</html>
