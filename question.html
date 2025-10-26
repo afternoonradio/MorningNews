@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Proclamation</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f9fafb;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Key？</h1>
+  <input id="answer" placeholder="enter answer...">
+  <button onclick="checkAnswer()">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer() {
+      const ans = document.getElementById('answer').value.trim();
+      const result = document.getElementById('result');
+      if (ans === 'sun') {
+        result.textContent = 'please stay';
+      } else {
+        result.textContent = 'try again';
+      }
+    }
+  </script>
+</body>
+</html>
